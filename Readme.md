@@ -6,3 +6,7 @@
 * Use FastAPI
 * Write tests
 * Count requests
+* Authentication
+
+## Start dev server
+`uvicorn main:app --reload`
