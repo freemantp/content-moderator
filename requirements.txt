@@ -2,3 +2,4 @@ torch
 transformers
 fastapi
 uvicorn[standard]
+prometheus-fastapi-instrumentator
