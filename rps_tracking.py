@@ -6,9 +6,10 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 class RPSMiddleware(BaseHTTPMiddleware):
 
-    """Since prometheus doesn't track requests-per-seconds
+    """Since prometheus doesn't track requests-per-seconds out of the box
         RPSMiddleware can be used to calculates it on the fly
-        Nota that the metric is not acurate when few requests arive and the
+        
+        Note that the metric can be inacurate when few requests arive and the
         time interval between requests is large"""
 
     def __init__(self, app):
