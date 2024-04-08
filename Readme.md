@@ -11,7 +11,13 @@ Prometheus is used to collect metrics of this service during runtime and exposed
 The service also tracks the incoming requests per seconds (rps). The metrics 
 endpoint can be queried to get the current value of `requests_per_second`
 
-## Improvements
+## Start the application
+1. Run the server with `uvicorn main:app`
+2. Open a browser window and naviagte to <http://127.0.0.1:8000/>
+### Prerequisites 
+* Install dependencies: `pip install -r requirements`
+
+## Further improvements
 To run this service in a productive environment, more work is needed:
 
 * Make sure hardware (GPU/TUP) is used for inference where available
@@ -19,11 +25,5 @@ To run this service in a productive environment, more work is needed:
 * Dockerize the application to be run in a containerized environment
 * Add Authentication and transport encryption, eg. throgh an API gateway
 * Use an external monitoring system (eg. Grafana) to determine *rps* across several instances of this service
-
-## Start the application
-1. Run the server with `uvicorn main:app`
-2. Open a browser window and naviagte to <http://127.0.0.1:8000/>
-### Prerequisites 
-* Install dependencies: `pip install -r requirements`
 
 
