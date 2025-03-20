@@ -1,6 +1,5 @@
-# Content moderation service
-
-This service provides a REST interface to classify text into different categories of offensive speech. It uses the _KoalaAI/Text-Moderation_ model to make predictions.
+# AI Content moderation service
+This service classifies text into offensive speech categories via a REST interface, leveraging the KoalaAI/Text-Moderation model for content analysis.
 
 See the OpenAPI documentation under `/docs` for details on how to use it
 
@@ -25,9 +24,7 @@ endpoint can be queried to get the current value of `requests_per_second`
 ## Further improvements
 
 To run this service in a productive environment, more work is needed:
-
-- Make sure hardware (GPU/TUP) is used for inference where available
-- Currently he model is pulled from the web on statup -> make it available offline
-- Dockerize the application to be run in a containerized environment
-- Add Authentication and transport encryption, eg. throgh an API gateway
+- Hardware (GPU/TPU) should be used inference where available
+- Currently the model is pulled from the web on statup -> make it available offline
+- Add authentication and transport encryption, eg. through an API gateway
 - Use an external monitoring system (eg. Grafana) to determine _rps_ across several instances of this service
